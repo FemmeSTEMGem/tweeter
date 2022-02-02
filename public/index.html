@@ -19,6 +19,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/scripts/composer-char-counter.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -31,16 +32,19 @@
       <div class="tagline">
         <div class="tagline-message"><strong>Write</strong> a new tweet</div>
         <div class="arrows"><i class="fas fa-angle-double-down"></i></div>
+      </div>
     </nav>
+    
     <header>
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2><strong>Shannon</strong> Piccinin</h2>
+        <h2><strong>Shannon</strong> Piccinin</h2>
       </div>
     </header>
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
@@ -53,6 +57,34 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <div></div>
+
+        <article>
+          <section class="user-info">
+            <div class="avatar-and-name">
+              <div class="avatar-alone">
+                <img src="/images/avatar.png">
+              </div>
+              <div class="name-alone">
+                Appa
+              </div>
+            </div>
+            <div class="handle">@SkyBison</div>
+          </section>
+          <p class="entry">
+              Raaarrrrrgggg!
+          </p>
+          <footer>
+            10 days ago
+            <div></div>
+            <div class="icons">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+
       </section>
     </main>
   </body>

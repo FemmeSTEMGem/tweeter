@@ -1,11 +1,14 @@
-.new-tweet {
-  width: 100%;
-}
-
 form {
   display: flex;
   flex-direction: column;
   font-weight: bold;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid black;
+  padding-top: 10px
 }
 
 .submitAndCounter {
@@ -21,11 +24,55 @@ form {
   color: #FFFFFF;
 }
 
+.new-tweet {
+  width: 100%;
+}
+
+.entry {
+  padding: 11px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar-and-name {
+  display: flex;
+  align-items: center;
+}
+
+.name-alone {
+  padding-left: 20px;
+}
+
+.handle {
+  font-weight: 600;
+  color: silver;
+}
+
+.icons {
+  padding: 10px;
+  color: rgb(165, 190, 165);
+}
+
+.icons .fas:hover {
+  color: #ab3ace;
+}
+
 #tweet-text {
   border: 0;
   outline: 0;
   background: transparent;
   border-bottom: 3px solid black;
   resize: none;
+  overflow: hidden;
   height: 30px
+}
+
+.red-class {
+  color: red
 }
