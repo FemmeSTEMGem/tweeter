@@ -8,7 +8,8 @@ footer {
   display: flex;
   justify-content: space-between;
   border-top: 3px solid black;
-  padding-top: 10px
+  padding: 10px;
+  margin: 10px;
 }
 
 .error {
@@ -27,7 +28,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Bungee';
-  
+  margin-bottom: 30px
 }
 
 .button {
@@ -49,6 +50,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2%;
 }
 
 .avatar-and-name {
@@ -74,6 +76,11 @@ footer {
   color: #ab3ace;
 }
 
+.tweet-post {
+  border: 3px solid black;
+  margin-top: 30px
+}
+
 #tweet-text {
   border: 0;
   outline: 0;
@@ -87,3 +94,4 @@ footer {
 .red-class {
   color: red
 }
+
