@@ -42,7 +42,7 @@ const renderTweets = function(tweets) {
   $tweetsContainer.empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $tweetsContainer.append($tweet)
+    $tweetsContainer.prepend($tweet)
   }
 }
 
@@ -50,13 +50,12 @@ const renderTweets = function(tweets) {
 $('form').on('submit', function (event) {
   event.preventDefault()
   const serializedData = $(this).serialize()
-  // if (serializedData.length - 5 > 140) {
-  //   alert("Too many characters!")
-  // }
-  // if (serializedData.length - 5 == 0) {
-  //   alert("You haven't entered anything yet!")
-  // }
-  // console.log(serializedData)
+  if (serializedData.length - 5 > 140) {
+    alert("Too many characters!")
+  }
+  if (serializedData.length - 5 == 0) {
+    alert("You haven't entered anything yet!")
+  }
 
 
   $.ajax({
@@ -65,6 +64,7 @@ $('form').on('submit', function (event) {
     data: $('form').serialize(),
     success: () => {
     loadTweets()
+    this.reset()
   },
 
   error: (err) => {
