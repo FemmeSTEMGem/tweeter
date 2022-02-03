@@ -49,6 +49,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="character error">
+          That's too many characters. Do you really need that many?
+        </div>
+        <div class="blank error">
+          Hey, you have to type something first! How about a haiku?
+        </div>
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>

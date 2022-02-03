@@ -11,6 +11,17 @@ footer {
   padding-top: 10px
 }
 
+.error {
+  display: none;
+  color:#ab3ace;
+  font-weight: 400;
+  border: 2px solid #ab3ace;
+  border-radius: 5px;
+  inline-size: 600px;
+  margin-left: 25%;
+  justify-content: center;
+}
+
 .submitAndCounter {
   display: flex;
   flex-direction: row;

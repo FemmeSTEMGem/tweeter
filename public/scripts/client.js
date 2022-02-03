@@ -6,6 +6,12 @@
 $(() => {
 //The above is equivalent to $(document).ready(() => {})
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
   const $tweet = `
   <article class="tweet-post">
@@ -21,7 +27,7 @@ const createTweetElement = function(tweet) {
     <div class="handle">${tweet.user.handle}</div>
   </section>
   <p class="entry">
-      ${tweet.content.text}
+      ${escape(tweet.content.text)}
   </p>
   <footer>
   <div class="created-at">${timeago.format(tweet.created_at)}</div>
@@ -50,11 +56,12 @@ const renderTweets = function(tweets) {
 $('form').on('submit', function (event) {
   event.preventDefault()
   const serializedData = $(this).serialize()
+  $('.error').slideUp(400)
   if (serializedData.length - 5 > 140) {
-    alert("Too many characters!")
+    $('.character').slideDown(400)
   }
   if (serializedData.length - 5 == 0) {
-    alert("You haven't entered anything yet!")
+    $('.blank').slideDown(400)
   }
 
 
