@@ -11,9 +11,11 @@ nav {
   top: 0;
 }
 
+
 span {
   font-size: 42px
 }
+
 
 .tagline {
   display: flex;
@@ -21,6 +23,7 @@ span {
   justify-content: center;
 
 }
+
 
 .arrows {
   color: red;

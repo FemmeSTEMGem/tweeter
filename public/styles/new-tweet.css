@@ -4,6 +4,7 @@ form {
   font-weight: bold;
 }
 
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -11,6 +12,7 @@ footer {
   padding: 10px;
   margin: 10px;
 }
+
 
 .error {
   display: none;
@@ -23,6 +25,7 @@ footer {
   justify-content: center;
 }
 
+
 .submitAndCounter {
   display: flex;
   flex-direction: row;
@@ -31,20 +34,24 @@ footer {
   margin-bottom: 30px
 }
 
+
 .button {
   background-color: #4056A1;
   color: #FFFFFF;
 }
 
+
 .new-tweet {
   width: 100%;
 }
+
 
 .entry {
   padding: 11px;
   font-size: 26px;
   font-weight: 600;
 }
+
 
 .user-info {
   display: flex;
@@ -53,33 +60,45 @@ footer {
   padding: 2%;
 }
 
+
 .avatar-and-name {
   display: flex;
   align-items: center;
 }
 
+
 .name-alone {
   padding-left: 20px;
 }
+
 
 .handle {
   font-weight: 600;
   color: silver;
 }
 
+
 .icons {
   padding: 10px;
   color: rgb(165, 190, 165);
 }
 
+
 .icons .fas:hover {
   color: #ab3ace;
 }
 
+
 .tweet-post {
   border: 3px solid black;
-  margin-top: 30px
+  margin-top: 30px;
 }
+
+
+.tweet-post:hover {
+  box-shadow: -30px 15px #c0a0ca;
+}
+
 
 #tweet-text {
   border: 0;
@@ -90,6 +109,7 @@ footer {
   overflow: hidden;
   height: 30px
 }
+
 
 .red-class {
   color: red

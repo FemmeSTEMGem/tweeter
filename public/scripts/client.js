@@ -3,14 +3,17 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+
 $(() => {
-//The above is equivalent to $(document).ready(() => {})
+
 
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
 
 const createTweetElement = function(tweet) {
   const $tweet = `
@@ -58,10 +61,11 @@ $('form').on('submit', function (event) {
   const serializedData = $(this).serialize()
   $('.error').slideUp(400)
   if (serializedData.length - 5 > 140) {
-    $('.character').slideDown(400)
+    return $('.character').slideDown(400)
+
   }
   if (serializedData.length - 5 == 0) {
-    $('.blank').slideDown(400)
+    return $('.blank').slideDown(400)
   }
 
 
@@ -95,6 +99,7 @@ const loadTweets = () => {
     }
   })
 }
+
 
 loadTweets()
 
