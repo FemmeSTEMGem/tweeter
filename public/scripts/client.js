@@ -3,14 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-
 $(() => {
 
 
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
+  // console.log("div: ", div)
   return div.innerHTML;
 };
 
@@ -58,13 +57,14 @@ const renderTweets = function(tweets) {
 
 $('form').on('submit', function (event) {
   event.preventDefault()
-  const serializedData = $(this).serialize()
+  let $tweetLength = $(this).find('textarea').val().length
+  console.log("tweetLength: ", $tweetLength)
   $('.error').slideUp(400)
-  if (serializedData.length - 5 > 140) {
+  if ($tweetLength > 140) {
     return $('.character').slideDown(400)
 
   }
-  if (serializedData.length - 5 == 0) {
+  if ($tweetLength == 0) {
     return $('.blank').slideDown(400)
   }
 
@@ -91,7 +91,7 @@ const loadTweets = () => {
     method: 'GET',
     dataType: 'json',
     success: (tweets) => {
-      console.log("data", tweets);
+      // console.log("data", tweets);
       renderTweets(tweets)
     },
     error: (err) => {
